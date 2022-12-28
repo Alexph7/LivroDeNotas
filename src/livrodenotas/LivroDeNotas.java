@@ -32,6 +32,10 @@ public class LivroDeNotas {
         System.out.printf("%nMedia da Classe é: %.2f%n", getMedia());
 
         // chama métodos getMinimo e getMaximo
+        System.out.printf("Nota Minima é: %d%n Nota Maxima é:%d%n%n", getMinimo(), getMaxima());
+
+        // chama outputBarraGrafico para imprimir gráfico de distribuição de nota
+        exibirBarraGrafico();
     }
 
     public int getMinimo() {
@@ -47,7 +51,7 @@ public class LivroDeNotas {
         return notaBaixa;
     }
 
-    public int notaMaxima() {
+    public int getMaxima() {
         int notaAlta = notas[0]; //supõe que notas[0] é a maior nota
 
         //Faz um loop pelo Array
@@ -72,8 +76,8 @@ public class LivroDeNotas {
     }
 
     // gera a saída do gráfico de barras exibindo distribuição de notas
-    public void saidaBarraGrafico() {
-        System.out.print("Distribuição de Notas");
+    public void exibirBarraGrafico() {
+        System.out.printf("Distribuição de Notas: %n");
 
         // armazena frequência de notas em cada intervalo de 10 notas
         int[] frequencia = new int[11];
