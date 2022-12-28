@@ -22,7 +22,7 @@ public class LivroDeNotas {
         this.NomeDoCurso = NomeDoCurso;
     }
 
-    // realiza várias operações nos dados
+    // realiza várias operações nos dados, contém uma série de chamadas de método que geram um relatório que resume as notas.
     public void processarNotas() {
 
         //Mostra a Saida do Array de Notas
@@ -101,9 +101,18 @@ public class LivroDeNotas {
     //Gera a Saida de Texto De Array De Notas
     public void outputNotas() {
         System.out.printf("As Notas São: %n%n");
-
+        /*
+         * Uma instrução for controlada por contador deve ser utilizada nesse
+         * caso, porque a variavel contadora estudante tem o valor utilizado
+         * para saída de cada nota ao lado de um número de aluno particular.
+         * Embora os índices de array iniciem em 0, em geral, um professor
+         * numeraria os alunos iniciando em 1. Portanto , as linhas geram saída
+         * de student + 1 como o número de aluno para produzir rótulos de nota
+         * "Student 1: ", "Student 2: " e assim por diante
+         */
         for (int estudante = 0; estudante < notas.length; estudante++) {
-            System.out.printf("Estudante %2d: %3d%n", estudante + 1, notas[estudante]);
+            System.out.printf("Estudante %2d: %3d%n", estudante + 1,
+                  notas[estudante]);
         }
     }
 
