@@ -71,6 +71,33 @@ public class LivroDeNotas {
         return (double) total / notas.length;
     }
 
+    // gera a saída do gráfico de barras exibindo distribuição de notas
+    public void saidaBarraGrafico() {
+        System.out.print("Distribuição de Notas");
+
+        // armazena frequência de notas em cada intervalo de 10 notas
+        int[] frequencia = new int[11];
+
+        //para cada nota, incrementa a frequência apropriadaÿ
+        for (int nota : notas) {
+            ++frequencia[nota / 10];
+        }
+        // para cada frequência de nota, imprime barra no gráfico
+        for (int i = 0; i < frequencia.length; i++) {
+            // gera saída do rótulo de barra ( "00-09: ", ..., "90-99: ", "100: ")
+            if (i == 10) {
+                System.out.printf("%5d: ", 100);
+            } else {
+                System.out.printf("%02d-%02d: ", i * 10, i * 10 + 9);
+            }
+            // imprime a barra de asteriscos
+            for (int asterisco = 0; asterisco < frequencia[i]; asterisco++) {
+                System.out.printf("*");
+            }
+            System.out.println();
+        }
+    }
+
     //Gera a Saida de Texto De Array De Notas
     public void outputNotas() {
         System.out.printf("As Notas São: %n%n");
