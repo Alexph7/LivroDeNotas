@@ -23,7 +23,7 @@ public class LivroDeNotas {
     }
 
     // realiza várias operações nos dados, contém uma série de chamadas de método que geram um relatório que resume as notas.
-    public void processarNotas() {
+    public void resumirNotas() {
 
         //Mostra a Saida do Array de Notas
         outputNotas();
