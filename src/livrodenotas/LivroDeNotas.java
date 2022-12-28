@@ -104,7 +104,7 @@ public class LivroDeNotas {
 
     //Gera a Saida de Texto De Array De Notas
     public void outputNotas() {
-        System.out.printf("As Notas São: %n%n");
+        System.out.printf("As Notas São: %n");
         /*
          * Uma instrução for controlada por contador deve ser utilizada nesse
          * caso, porque a variavel contadora estudante tem o valor utilizado
